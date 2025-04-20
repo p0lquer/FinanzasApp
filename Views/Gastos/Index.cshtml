@@ -1,0 +1,29 @@
+﻿@model IEnumerable<FinanzasApp.Models.Gastos>
+
+	<h1>Gastos Generales</h1>
+
+	<div class="container">
+
+		<table class="table table-bordered">
+			<thead>
+			<tr class="table-responsive">
+				<th>Fecha</th>
+				<th>Monto</th>
+				<th>Categoria</th>
+				<th>Descripcion</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach(var item in Model)
+				{
+					<tr>
+					
+					<td>@item.Fecha.ToString("dd/MM/yyyy")</td>
+					<td>@item.Monto.ToString("C")</td>
+					<td>@item.Categoria</td>
+					<td>@item.Descripcion</td>
+		</tr>
+				}
+			</tbody>
+		</table>
+	</div>
